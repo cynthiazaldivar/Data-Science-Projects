@@ -19,13 +19,10 @@ train = pd.read_table("zip.train", header=None, delim_whitespace=True)
 train = train[0:1000]  # First 1000 rows
 
 test_class = np.array(test[0])
-test_data = test.drop(test.columns[[0]], axis=1)
-test_data = np.array(test_data)
+test_data = np.array(test.drop(test.columns[[0]], axis=1))
 
-train_class = train[0].astype(int)
-train_class = np.array(train_class)
-train_data = train.drop(train.columns[[0]], axis=1)
-train_data = np.array(train_data)
+train_class = np.array(train[0].astype(int))
+train_data = np.array(train.drop(train.columns[[0]], axis=1))
 
 '''
 Returns most common item in a list
